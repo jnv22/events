@@ -1,0 +1,45 @@
+<!--
+
+index.html
+
+Jordan Vartanian
+
+An app that will give you a weather forecast during a selected event
+utilizing event and weather APIs  
+
+ -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+    <form id="query" action="away.php" method="get">
+    <!-- location input -->
+    <label for="location">Location:</label>
+    <input type="text" id="location" name="location"/>
+    <!-- date input -->
+    <label for="date">date:</label>
+    <input type="text" id="date" name="date"/>
+    <select id="category" name="category">
+	  <option>Please Select a category</option>
+	</select>
+    <input type="submit" value="submit" />
+    </form>
+    <h1>Welcome to Event Planner</h1>
+    <h2>The site where will help you plan upcoming events with what the weather is doing for that day!</h2>
+    <a href="google.com">Google</a>
+    <section id="container">
+    <div id="newevent"> 
+
+    </div>
+    <div id="category"> 
+
+    </div>
+    </section>
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="templates/script.js"></script>
+
+
+    </body>
+ </html>   
