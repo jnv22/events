@@ -15,6 +15,7 @@ utilizing event and weather APIs
     <title>Events/Weather</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     </head>
+
     <body>
 	    <div>
 		    <form id="query" action="away.php" method="get">
@@ -40,8 +41,8 @@ utilizing event and weather APIs
 		    	</div>
 		    </section>  
 	    </div>
-		<nav>  
-	    <ul id="pagination-demo" class="pagination-sm"></ul>
+	  <nav>  
+    <ul id="pagination-demo" class="pagination-sm"></ul>
 		</nav>             
 		<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 		<script src="templates/jquery.twbsPagination.min.js" type="text/javascript"></script> 
