@@ -8,13 +8,14 @@
 *
 */
 
-$(document).ready(function(){
+$(document).ready(function()
+{
 	//Call eventful API and update categories
 	(function() 
 	{
 		var $categories=$('#category');
 		$.ajax({
-			url:"http://api.eventful.com/json/categories/list?app_key=XXXXXX",
+			url:"http://api.eventful.com/json/categories/list?app_key=HB6LmHcST5f2KLkM",
 			dataType: 'jsonp',		
 			success:function(response) 
 			{
@@ -33,22 +34,80 @@ $(document).ready(function(){
 	
 	})();
 
+	function date (response)
+	{
+		d=new Date(response);
+		var day=d.getDate();
+		var month=d.getMonth();
+		console.log(d);
+		var date=(month+1)+"/"+day;
+		return date;
+	};
+
+	function time (response)
+	{
+		d=new Date(response);
+		var hours= d.getHours();
+		var minutes=d.getMinutes();
+		var end='';
+		if(hours>12)
+		{
+			var end="PM";
+			var hours=hours-12;
+		}
+
+		else
+		{
+			var end="AM";
+		}
+
+		if(minutes < 10)
+		{
+			minutes = "0"+ minutes;
+		}
+
+			var time= hours +":" + minutes+ end;
+		
+		return time;
+	};
+
+
+
 	function eventApi(content,response)
 	{
 			var newContent='';
-				content.html(function()
+			var dates='';
+			var times='';
+			content.html(function()
+			{
+				for(var i=0; i<response.events.event.length; i++)
+				{
+					
+					
+					newContent+='<li class="clearfix">';
+					newContent+= '<h5><a href='+$.trim(response.events.event[i].url)+">"
+					+$.trim(response.events.event[i].title)+"</a></h5><br>";
+					newContent+='<button type="button" id="myButton" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Get Weather</button>';
+
+					if(response.events.event[i].image !== null)
 					{
-						for(var i=0; i<response.events.event.length; i++)
-						{
-							newContent+= "<p>"+$.trim(response.events.event[i].title)+"</p>";
-							if(response.events.event[i].image !== null)
-							{
-							newContent+= "<img src="+response.events.event[i].image.medium.url+">";
-							}
-						}
-						return newContent;
-					}).hide().fadeIn(400);
-	};
+					newContent+= "<img src="+response.events.event[i].image.medium.url+'>';
+					}
+					newContent+='<div class="info">';						
+					newContent+= date(response.events.event[i].start_time)+"<br>";
+					newContent+= time(response.events.event[i].start_time)+"<br>";
+					newContent+='</div';
+					newContent+='</li>';	
+				}
+				return newContent;
+				}).hide().fadeIn(400);
+
+
+	  			$(".btn").on('click', function (e) {
+	  			e.preventDefault();
+
+		  		})
+			};
 
 
 

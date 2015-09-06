@@ -1,0 +1,41 @@
+/*
+main.css
+
+Jordan Vartanian
+
+*/
+
+
+.clearfix img {
+	float:left;
+	display:inline-block;
+	margin-top: 3%;
+	margin-bottom: 3%;
+
+}
+
+.clearfix a {
+	float:left;
+	display:block;
+
+
+}
+
+.clearfix .info {
+	clear:left;
+	display:inline-block;
+	margin-left: 10%;
+	margin-top: 5%;
+}
+
+.clearfix {
+	border-bottom: 1px solid black;
+	overflow auto;
+	zoom 1;
+}
+
+.btn {
+	float:right;
+	margin-right: 10%;
+}
+

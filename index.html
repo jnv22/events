@@ -14,9 +14,9 @@ utilizing event and weather APIs
     <head>
     <title>Events/Weather</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="templates/main.css">
     </head>
     <body>
-	    <div>
 		    <form id="query" action="away.php" method="get">
 			    <!-- location input -->
 			    <label for="location">Location:</label>
@@ -33,18 +33,37 @@ utilizing event and weather APIs
 
 		    <h1>Welcome to Event Planner</h1>
 		    <h2>The site where we will help you plan upcoming events with the forecasted weather</h2>
-		    <section id="container">
-		    	<div id="newevent"> 
-		    	</div>
+
+		    	<ul id="newevent"> 
+		    	</ul>
 		    	<div id="forecast">
-		    	</div>
-		    </section>  
-	    </div>
+		    	</div>  
 		<nav>  
 	    <ul id="pagination-demo" class="pagination-sm"></ul>
-		</nav>             
+		</nav>
+
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+	      </div>
+	      <div class="modal-body">
+	        ...
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-primary">Save changes</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
 		<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-		<script src="templates/jquery.twbsPagination.min.js" type="text/javascript"></script> 
+		<script src="templates/jquery.twbsPagination.min.js" type="text/javascript"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>		 
 		<script src="templates/script.js"></script>
     </body>
 </html>   
