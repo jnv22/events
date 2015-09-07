@@ -17,6 +17,7 @@ utilizing event and weather APIs
     <link rel="stylesheet" href="templates/main.css">
     </head>
     <body>
+    	<div class="container-fluid">
 		    <form id="query" action="away.php" method="get">
 			    <!-- location input -->
 			    <label for="location">Location:</label>
@@ -30,7 +31,6 @@ utilizing event and weather APIs
 				</select>
 			    <input type="submit" value="submit" />
 		    </form>
-
 		    <h1>Welcome to Event Planner</h1>
 		    <h2>The site where we will help you plan upcoming events with the forecasted weather</h2>
 
@@ -38,10 +38,10 @@ utilizing event and weather APIs
 		    	</ul>
 		    	<div id="forecast">
 		    	</div>  
-		<nav>  
-	    <ul id="pagination-demo" class="pagination-sm"></ul>
-		</nav>
-
+			<nav>  
+		    <ul id="pagination-demo" class="pagination-sm"></ul>
+			</nav>
+		</div>
 	<!-- Modal -->
 	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 	  <div class="modal-dialog" role="document">
@@ -51,11 +51,12 @@ utilizing event and weather APIs
 	        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
 	      </div>
 	      <div class="modal-body">
-	        ...
+	      </div>
+	      <div class="modal-body2">
+
 	      </div>
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-	        <button type="button" class="btn btn-primary">Save changes</button>
 	      </div>
 	    </div>
 	  </div>

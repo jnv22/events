@@ -39,3 +39,43 @@ Jordan Vartanian
 	margin-right: 10%;
 }
 
+
+body .modal-footer {
+	clear:both;
+}
+
+body .modal-content {
+  width: 900px;
+  margin-left:-150px;
+}
+
+.col-xs-1 {
+	width:12.5%;
+}
+
+.myModal {
+
+  zoom: 1;
+  filter: alpha(opacity=45);
+  opacity: 0.45;
+  -webkit-transition: opacity .5s ease-in-out;
+  -moz-transition: opacity .5s ease-in-out;
+  -ms-transition: opacity .5s ease-in-out;
+  -o-transition: opacity .5s ease-in-out;
+  transition: opacity .5s ease-in-out;
+}
+
+.modal-body2 {
+	margin-top:35%;
+	text-align: center;
+}
+
+.container-fluid {
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+ul
+{
+    list-style-type: none;
+}
