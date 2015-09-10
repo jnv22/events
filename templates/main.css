@@ -5,6 +5,42 @@ Jordan Vartanian
 
 */
 
+body {
+	background-color:#E8E8E8;
+}
+
+#newevent {
+	background-color:white;
+	padding-right:3%;
+	border-radius:2.5em;
+	margin-top:5%;
+
+}
+
+h4, h2, p, a, button, label, select, input {
+	font-family: 'Arvo', serif;
+}
+
+h2 {
+	font-weight: 700;
+	color:#474747;
+	font-size:3em;
+}
+
+p {
+	font-weight:700;
+	color:#474747;
+}
+
+a {
+	font-weight: 700;
+	font-size:1.2em;
+}
+
+.clearfix .info p {
+	font-size: 1.1em;
+	color:#474747;
+}
 
 .clearfix img {
 	float:left;
@@ -37,6 +73,7 @@ Jordan Vartanian
 .btn {
 	float:right;
 	margin-right: 10%;
+	margin-top:5%;
 }
 
 
@@ -78,4 +115,13 @@ body .modal-content {
 ul
 {
     list-style-type: none;
+}
+
+form {
+		padding-bottom: 2%;
+
+}
+
+li:last-child {
+	border-bottom:none;
 }
