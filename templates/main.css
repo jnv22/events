@@ -90,6 +90,9 @@ body .modal-content {
 	width:12.5%;
 }
 
+form p {
+	margin-top:1%;
+}
 .myModal {
 
   zoom: 1;

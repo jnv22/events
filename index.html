@@ -23,20 +23,21 @@ utilizing event and weather APIs
     <body>
     	<div class="container-fluid">
     		<h2>Welcome to Event Planner</h2>
-		    <p>The site where we will help you plan upcoming events with the forecasted weather</p><br>
+		    <p>The site where we will help you plan upcoming events, up to 5 days away, with the forecasted weather</p><br>
 		    <noscript><h4>JavaScript is disabled.  For full functionality of this page it is necessary to enable JavaScript. Here are the instructions how to enable<a href="http://www.enable-javascript.com" target="_blank"> JavaScript in your web browser</a></h4></noscript>
 		    <form id="query" action="" method="get">
 			    <!-- location input -->
 			    <label for="location">Location:</label>
 			    <input type="text" id="location" name="location"/>
 			    <!-- date input -->
-			    <label for="date">date(for accuracy, within 5 days from today):</label>
+			    <label for="date">Date:</label>
 			    <input type="text" id="date" name="date"/>
 			    <!-- category selection -->
 			    <select id="category" name="category">
 				  <option>Please Select a category</option>
 				</select>
 			    <input type="submit" value="submit" />
+			    <p>Note: submit button will lock until all fields are filled out</p>
 		    </form>
 		    	<ul id="newevent"> 
 		    	</ul>

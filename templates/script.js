@@ -28,8 +28,24 @@ $(document).ready(function()
 				});	
 			}
 		});	
-	
+		
+ 	validate();
+    $('#location, #date').change(validate);
+
 	})();
+    
+
+    function validate(){
+    if ($('#location').val().length   >   0   &&
+        $('#date').val().length  >   0) {
+        $("input[type=submit]").prop("disabled", false);
+    	$(':submit').html('');
+    }
+    else {
+        $("input[type=submit]").prop("disabled", true);
+
+    }
+}
 
 	function historyChange(urlnew){
 		
@@ -92,13 +108,13 @@ $(document).ready(function()
 					{
 						var newContent="";
 						$categories.html(function()
+						{
+							for(var i=0; i<response.category.length; i++)
 							{
-								for(var i=0; i<response.category.length; i++)
-								{
-									newContent+='<option value="'+response.category[i].id+'">'+response.category[i].name+'</option>';
-								}
-								return newContent;
-							});	
+								newContent+='<option value="'+response.category[i].id+'">'+response.category[i].name+'</option>';
+							}
+							return newContent;
+						});	
 					}
 				});	
 			}
@@ -402,7 +418,7 @@ $(document).ready(function()
 		//event api url
 		var urle="http://api.eventful.com/json/events/search?app_key=HB6LmHcST5f2KLkM&sort_order=popularity&page_number=1&"+data;
 		var content=$('#newevent');
-			
+
 		$.ajax({
 			url:urle,
 			dataType: 'jsonp',		
